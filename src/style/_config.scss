@@ -1,0 +1,31 @@
+@import "~bootstrap/scss/bootstrap";
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+@import "~rfs/scss";
+@import "aos/dist/aos.css";
+
+$primary-color: #f6f6f6;
+$dark-color: #060607;
+$stick-timeline-color: #7cc9db;
+$timeline-content-color: #0061a8;
+$button-color: #104891;
+
+@font-face {
+  font-family: "Poppins", sans-serif;
+  src: url(../assets/fonts/Poppins-Black.woff2) format("woff2"),
+    url(../assets/fonts/Poppins-BlackItalic.woff2) format("woff2"),
+    url(../assets/fonts/Poppins-Bold.woff2) format("woff2"),
+    url(../assets/fonts/Poppins-BoldItalic.woff2) format("woff2"),
+    url(../assets/fonts/Poppins-ExtraBold.woff2) format("woff2"),
+    url(../assets/fonts/Poppins-ExtraBoldItalic.woff2) format("woff2"),
+    url(../assets/fonts/Poppins-ExtraLight.woff2) format("woff2"),
+    url(../assets/fonts/Poppins-Italic.woff2) format("woff2"),
+    url(../assets/fonts/Poppins-Light.woff2) format("woff2"),
+    url(../assets/fonts/Poppins-LightItalic.woff2) format("woff2"),
+    url(../assets/fonts/Poppins-Medium.woff2) format("woff2"),
+    url(../assets/fonts/Poppins-MediumItalic.woff2) format("woff2"),
+    url(../assets/fonts/Poppins-Regular.woff2) format("woff2"),
+    url(../assets/fonts/Poppins-SemiBold.woff2) format("woff2"),
+    url(../assets/fonts/Poppins-SemiBoldItalic.woff2) format("woff2"),
+    url(../assets/fonts/Poppins-Thin.woff2) format("woff2"),
+    url(../assets/fonts/Poppins-ThinItalic.woff2) format("woff2");
+}

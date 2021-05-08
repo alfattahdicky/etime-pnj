@@ -1,0 +1,299 @@
+@import "config";
+@import "event";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  line-height: $line-height-base;
+  scroll-behavior: smooth;
+}
+
+h1 {
+  @include rfs(2.3rem, font-size);
+}
+
+p {
+  text-align: justify;
+  @include rfs(1rem, font-size);
+}
+
+// Navbar
+nav {
+  background-color: $dark-color;
+  a {
+    color: $primary-color;
+    &:hover {
+      color: $blue-200;
+    }
+  }
+  .navbar-brand {
+    font-size: 1.5rem;
+  }
+  #toggle {
+    color: $primary-color;
+    font-size: 2rem;
+  }
+  & .navbar-toggler,
+  & .navbar-toggler:focus {
+    outline: none;
+    border: none;
+    box-shadow: none;
+  }
+  .dropdown-menu {
+    background-color: $dark-color;
+    li {
+      width: 100%;
+      padding: 0.25rem;
+      a {
+        text-align: center;
+        color: $primary-color;
+        &:hover {
+          color: $primary-color;
+          background-color: $button-color;
+        }
+      }
+    }
+  }
+}
+
+// Hero Section
+.hero {
+  img {
+    object-fit: cover;
+    object-position: center;
+    $size: 150px;
+    width: $size;
+    height: $size;
+  }
+  .content-hero {
+    color: $primary-color;
+    .title-hero {
+      margin: 1.2rem 0 0.5rem;
+      font-weight: 600;
+      @include rfs(3rem, font-size);
+    }
+    .caption-hero {
+      font-weight: 400;
+      @include rfs(1.7rem, font-size);
+    }
+  }
+}
+
+.etime-intro {
+  color: $primary-color;
+  background: linear-gradient(
+    180deg,
+    #060607 4.17%,
+    #141431 43.23%,
+    rgba(7, 26, 82, 0.97) 71.35%
+  );
+  // intro
+  .intro {
+    img {
+      $size: 300px;
+      width: $size;
+      height: $size;
+    }
+  }
+  // events
+  .events {
+    img {
+      $size: 350px;
+      width: $size;
+      height: auto;
+    }
+    p {
+      padding: 0 0 1rem;
+    }
+    .link {
+      text-decoration: none;
+      background-color: $button-color;
+      color: $primary-color;
+      padding: 1rem 1.5rem;
+      border-radius: 5px;
+      display: inline-block;
+      transform: scale(1);
+      transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      &:hover {
+        transform: scale(0.95);
+      }
+    }
+  }
+}
+
+// roadmap
+.roadmap {
+  img {
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    $size: 600px;
+    max-width: $size;
+    height: auto;
+  }
+}
+
+/* Timeline */
+.etime-timeline {
+  background: linear-gradient(
+    180deg,
+    rgba(7, 26, 82, 0.97) 20.31%,
+    rgba(17, 29, 94, 0.95) 46.88%,
+    #050506 71.87%
+  );
+  color: $primary-color;
+}
+
+.timeline ul li {
+  list-style-type: none;
+  position: relative;
+  width: 6px;
+  margin: 0 auto;
+  background: $stick-timeline-color;
+  &:nth-child(1) {
+    padding: 0;
+  }
+}
+
+.timeline ul li::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 60%;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #2978b5;
+}
+
+.timeline ul li .content {
+  position: relative;
+  bottom: 0;
+  width: 300px;
+  padding: 10px;
+  background: $timeline-content-color;
+  @include rfs(1rem, font-size);
+}
+
+.timeline ul li:nth-child(even) .content {
+  left: 45px;
+}
+
+.timeline ul li:nth-child(odd) .content {
+  left: -340px;
+}
+
+.timeline ul li .content {
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+
+.timeline ul li:nth-child(even) .content {
+  transform: translate3d(200px, 0, 0);
+}
+
+.timeline ul li:nth-child(odd) .content {
+  transform: translate3d(-200px, 0, 0);
+}
+
+.timeline ul li.in-view .content {
+  transform: none;
+  visibility: visible;
+  opacity: 1;
+}
+
+@include media-breakpoint-down(lg) {
+  .timeline ul li .content {
+    width: 280px;
+  }
+  .timeline ul li:nth-child(odd) .content {
+    left: -310px;
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .timeline ul li {
+    margin-left: 5px;
+    padding: 5px 0;
+  }
+  .timeline ul li .content {
+    width: calc(100vw - 150px);
+  }
+  .timeline ul li:nth-child(even) .content {
+    bottom: 0;
+  }
+  .timeline ul li:nth-child(odd) .content {
+    left: 45px;
+  }
+}
+
+// footer
+.etime-footer {
+  color: $primary-color;
+  .footer-info {
+    background: #050506;
+    h3 {
+      font-size: 1.2rem;
+      font-weight: 500;
+    }
+    img {
+      object-fit: cover;
+      object-position: center;
+      $size: 100px;
+      width: $size;
+      height: $size;
+    }
+
+    .contact {
+      a {
+        cursor: text;
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+
+    a {
+      @include rfs(1rem, font-size);
+      text-decoration: none;
+      color: $primary-color;
+      margin: 0.3rem 0;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  footer {
+    background-color: $dark-color;
+    .gmail {
+      @include rfs(0.8rem, font-size);
+    }
+  }
+}
+
+@include media-breakpoint-down(lg) {
+  .etime-intro {
+    // Intro
+    .intro {
+      img {
+        $size: 250px;
+        width: $size;
+        height: auto;
+      }
+    }
+    .events {
+      img {
+        $size: 250px;
+        width: $size;
+        height: auto;
+      }
+    }
+  }
+}
