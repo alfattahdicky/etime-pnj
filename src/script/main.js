@@ -49,4 +49,3 @@ const image = document.getElementsByTagName("img");
 for (let i = 0; i < image.length; i++) {
   image[i].setAttribute("loading", "lazy");
 }
-console.log(image);

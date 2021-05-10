@@ -79,7 +79,8 @@ nav {
     }
     .caption-hero {
       font-weight: 400;
-      @include rfs(1.7rem, font-size);
+      @include rfs(1.5rem, font-size);
+      text-transform: uppercase;
     }
   }
 }
@@ -232,6 +233,18 @@ nav {
   .timeline ul li:nth-child(odd) .content {
     left: 45px;
   }
+  nav {
+    .nav-items {
+      @include rfs(1.5rem, padding);
+    }
+  }
+  .timeline ul li:nth-child(even) .content {
+    transform: translate3d(0, 0, 0);
+  }
+
+  .timeline ul li:nth-child(odd) .content {
+    transform: translate3d(0, 0, 0);
+  }
 }
 
 // footer
@@ -274,6 +287,13 @@ nav {
     background-color: $dark-color;
     .gmail {
       @include rfs(0.8rem, font-size);
+    }
+    a {
+      transform: scale(1);
+      transition: all 0.2s ease;
+      &:hover {
+        transform: scale(0.9);
+      }
     }
   }
 }
