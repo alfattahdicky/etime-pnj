@@ -26,9 +26,9 @@ p {
 nav {
   background-color: $dark-color;
   a {
-    color: $primary-color;
+    color: $primary-color !important;
     &:hover {
-      color: $blue-200;
+      color: $blue-200 !important;
     }
   }
   .navbar-brand {
