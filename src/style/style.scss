@@ -179,15 +179,18 @@ nav {
   width: 300px;
   padding: 10px;
   background: $timeline-content-color;
-  @include rfs(1rem, font-size);
+  @include rfs(0.9rem, font-size);
+  time {
+    @include rfs(1rem, font-size);
+  }
 }
 
 .timeline ul li:nth-child(even) .content {
-  left: 45px;
+  left: 30px;
 }
 
 .timeline ul li:nth-child(odd) .content {
-  left: -340px;
+  left: -330px;
 }
 
 .timeline ul li .content {
@@ -220,23 +223,26 @@ nav {
 }
 
 @include media-breakpoint-down(md) {
+  nav {
+    .nav-items {
+      @include rfs(1.5rem, padding);
+    }
+    a {
+      @include rfs(1.2rem, font-size);
+    }
+  }
   .timeline ul li {
     margin-left: 5px;
     padding: 5px 0;
   }
   .timeline ul li .content {
-    width: calc(100vw - 150px);
+    width: calc(100vw - 120px);
   }
   .timeline ul li:nth-child(even) .content {
     bottom: 0;
   }
   .timeline ul li:nth-child(odd) .content {
-    left: 45px;
-  }
-  nav {
-    .nav-items {
-      @include rfs(1.5rem, padding);
-    }
+    left: 30px;
   }
   .timeline ul li:nth-child(even) .content {
     transform: translate3d(0, 0, 0);

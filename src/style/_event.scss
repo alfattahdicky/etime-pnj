@@ -62,6 +62,8 @@ main {
       img {
         width: 200px;
         height: 200px;
+        @include rfs(1rem, padding-bottom);
+        @include rfs(1rem, padding-top);
       }
     }
 
