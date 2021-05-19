@@ -253,6 +253,18 @@ nav {
   }
 }
 
+.brand {
+  img {
+    width: 50px;
+    height: auto;
+  }
+  .sponsor {
+    img {
+      width: 100px;
+    }
+  }
+}
+
 // footer
 .etime-footer {
   color: $primary-color;
