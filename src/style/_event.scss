@@ -60,15 +60,33 @@ main {
     }
     &.price-lomba {
       h1 {
-        @include rfs(2.2rem, font-size);
+        @include rfs(1.7rem, font-size);
+        time {
+          display: block;
+          @include rfs(1.2rem, font-size);
+          margin: 5px 0;
+          color: #e83737;
+          animation: lightText 1s infinite;
+        }
       }
       p {
-        text-align: start;
-        @include rfs(1.3rem, font-size);
+        @include rfs(1.2rem, font-size);
+        span {
+          @include rfs(1.5rem, font-size);
+        }
+        .regist {
+          color: #d8ac13;
+        }
+        .prize {
+          color: #119461;
+          i {
+            color: #119461;
+          }
+        }
       }
       img {
-        width: 200px;
-        height: 200px;
+        width: 170px;
+        height: 170px;
         @include rfs(1rem, padding-bottom);
         @include rfs(1rem, padding-top);
       }
@@ -94,13 +112,42 @@ main {
   }
 }
 
+@keyframes lightText {
+  0% {
+    color: $primary-color;
+  }
+  50% {
+    color: #e83737;
+  }
+  75% {
+    color: #e83737;
+  }
+  100% {
+    color: $primary-color;
+  }
+}
+
+// @include media-breakpoint-down(sm) {
+//   main {
+//     section {
+//       &.price-lomba {
+//         img {
+//           width: 150px;
+//           height: 150px;
+//         }
+//       }
+//     }
+//   }
+// }
+
 @include media-breakpoint-down(lg) {
   main {
     section {
       &.price-lomba {
         img {
-          width: 150px;
-          height: 150px;
+          width: 100%;
+          max-width: 100px;
+          height: auto;
         }
       }
     }
