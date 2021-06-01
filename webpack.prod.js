@@ -4,7 +4,6 @@ const common = require("./webpack.common");
 const { merge } = require("webpack-merge");
 const TerserPlugin = require("terser-webpack-plugin");
 const CSSMinimizerPlugin = require("css-minimizer-webpack-plugin");
-const ImageminSvgo = require("imagemin-svgo");
 const ImageminPngQuant = require("imagemin-pngquant");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 module.exports = merge(common, {
