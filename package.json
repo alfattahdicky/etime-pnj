@@ -1,6 +1,6 @@
 {
   "name": "e-time",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Perlombaan tahunan berskala nasional di bidang teknik elektro dengan peserta yang berasal dari Universitas dan Politeknik se-Indonesia.",
   "main": "index.js",
   "scripts": {
