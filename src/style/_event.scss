@@ -22,7 +22,7 @@ main {
     }
     &.category {
       img {
-        width: 120px;
+        width: auto;
         height: 120px;
         @include rfs(1rem, padding-bottom);
       }
@@ -61,13 +61,6 @@ main {
     &.price-lomba {
       h1 {
         @include rfs(1.7rem, font-size);
-        time {
-          display: block;
-          @include rfs(1.2rem, font-size);
-          margin: 5px 0;
-          color: #e83737;
-          animation: lightText 1s infinite;
-        }
       }
       p {
         @include rfs(1.2rem, font-size);
@@ -85,7 +78,7 @@ main {
         }
       }
       img {
-        width: 170px;
+        width: auto;
         height: 170px;
         @include rfs(1rem, padding-bottom);
         @include rfs(1rem, padding-top);
@@ -112,33 +105,7 @@ main {
   }
 }
 
-@keyframes lightText {
-  0% {
-    color: $primary-color;
-  }
-  50% {
-    color: #e83737;
-  }
-  75% {
-    color: #e83737;
-  }
-  100% {
-    color: $primary-color;
-  }
-}
 
-// @include media-breakpoint-down(sm) {
-//   main {
-//     section {
-//       &.price-lomba {
-//         img {
-//           width: 150px;
-//           height: 150px;
-//         }
-//       }
-//     }
-//   }
-// }
 
 @include media-breakpoint-down(lg) {
   main {

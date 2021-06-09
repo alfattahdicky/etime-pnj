@@ -40,12 +40,19 @@ function callbackFun() {
 window.addEventListener("load", callbackFun);
 window.addEventListener("scroll", callbackFun);
 
-console.log(window.Scrollbar);
 
 // Loading lazy
-
 const image = document.getElementsByTagName("img");
 
 for (let i = 0; i < image.length; i++) {
   image[i].setAttribute("loading", "lazy");
 }
+
+
+// loading content
+
+const loadingElement = document.getElementById('loading');
+
+window.addEventListener('load', function() {
+  loadingElement.style.display = 'none';
+})

@@ -13,6 +13,22 @@ body {
   overflow-x: hidden;
 }
 
+.loading {
+  position: fixed;
+  min-width: 100%;
+  min-height: 100vh;
+  z-index: 2000;
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .spinner-border {
+    color:#2978b5;
+    width: 5rem;
+    height: 5rem;
+  }
+}
+
 h1 {
   @include rfs(2.3rem, font-size);
 }
@@ -34,9 +50,12 @@ nav {
   .navbar-brand {
     font-size: 1.5rem;
   }
-  #toggle {
-    color: $primary-color;
-    font-size: 2rem;
+  button {
+    @include small-things;
+    #toggle {
+      color: $primary-color;
+      font-size: 2rem;
+    }
   }
   & .navbar-toggler,
   & .navbar-toggler:focus {
@@ -46,12 +65,11 @@ nav {
   }
   .dropdown-menu {
     background-color: $dark-color;
+    padding: 0;
     li {
       width: 100%;
-      &:nth-child(2) {
-        padding: 1rem 0;
-      }
       a {
+        @include small-things;
         text-align: center;
         color: $primary-color;
         &:hover {
@@ -153,6 +171,10 @@ nav {
   color: $primary-color;
 }
 
+.etime-timeline .timeline {
+  margin: 2rem 0 2rem;
+}
+
 .timeline ul li {
   list-style-type: none;
   position: relative;
@@ -234,6 +256,10 @@ nav {
       @include rfs(1.2rem, font-size);
     }
   }
+  .etime-timeline .timeline {
+    margin: 1rem 0 1rem;
+  }
+  
   .timeline ul li {
     margin-left: 5px;
     padding: 5px 0;

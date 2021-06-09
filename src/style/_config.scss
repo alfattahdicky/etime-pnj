@@ -29,3 +29,9 @@ $button-color: #104891;
     url(../assets/fonts/Poppins-Thin.woff2) format("woff2"),
     url(../assets/fonts/Poppins-ThinItalic.woff2) format("woff2");
 }
+
+@mixin small-things {
+  min-width: 44px;
+  min-height: 44px;
+  line-height: 44px;
+}
