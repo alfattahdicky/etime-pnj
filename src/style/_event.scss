@@ -89,6 +89,7 @@ main {
       h3 {
         @include rfs(1.7rem, font-size);
       }
+      
       a {
         background: transparent;
         padding: 16px 28px 8px;
@@ -110,6 +111,13 @@ main {
 @include media-breakpoint-down(lg) {
   main {
     section {
+      &.contact-lomba {
+        .contact-img {
+          width: 100%;
+          max-width: 250px;
+          height: auto;
+        }
+      }
       &.price-lomba {
         img {
           width: 100%;

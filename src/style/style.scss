@@ -180,10 +180,8 @@ nav {
   position: relative;
   width: 6px;
   margin: 0 auto;
+  padding: 15px 0;
   background: $stick-timeline-color;
-  &:nth-child(1) {
-    padding: 0;
-  }
 }
 
 .timeline ul li::after {
@@ -225,11 +223,11 @@ nav {
 }
 
 .timeline ul li:nth-child(even) .content {
-  transform: translate3d(200px, 0, 0);
+  transform: translate3d(100px, 0, 0);
 }
 
 .timeline ul li:nth-child(odd) .content {
-  transform: translate3d(-200px, 0, 0);
+  transform: translate3d(-100px, 0, 0);
 }
 
 .timeline ul li.in-view .content {
@@ -262,7 +260,7 @@ nav {
   
   .timeline ul li {
     margin-left: 5px;
-    padding: 5px 0;
+    padding: 10px 0;
   }
   .timeline ul li .content {
     width: calc(100vw - 120px);
