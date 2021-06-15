@@ -23,7 +23,7 @@ function isElementInViewport(el) {
     rect.top >= 0 &&
     rect.left >= 0 &&
     rect.bottom <=
-      (window.innerHeight || document.documentElement.clientHeight) &&
+    (window.innerHeight || document.documentElement.clientHeight) &&
     rect.right <= (window.innerWidth || document.documentElement.clientWidth)
   );
 }
@@ -53,6 +53,14 @@ for (let i = 0; i < image.length; i++) {
 
 const loadingElement = document.getElementById('loading');
 
-window.addEventListener('load', function() {
+window.addEventListener('load', function () {
   loadingElement.style.display = 'none';
+})
+
+// Control Video
+const videoEl = document.getElementById('video');
+const close = document.getElementById('close');
+close.addEventListener('click', function () {
+  close.style.display = 'none';
+  videoEl.style.display = 'none';
 })

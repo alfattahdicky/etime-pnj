@@ -11,8 +11,12 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.html$/,
-        use: ["html-loader"],
+        test: /\.html$/i,
+        use: 'html-loader',
+      },
+      {
+        test: /\.mp4$/,
+        loader: 'file-loader'
       },
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/i,
@@ -74,6 +78,10 @@ module.exports = {
         {
           from: "./src/assets/pdf",
           to: "./pdf",
+        },
+        {
+          from: "./src/assets/videos",
+          to: "./videos",
         },
       ],
     }),
