@@ -1,6 +1,7 @@
 import Aos from "aos";
 // AOS Library
 Aos.init({
+  disable: "mobile",
   once: true,
   duration: 800,
 });
@@ -57,10 +58,3 @@ window.addEventListener('load', function () {
   loadingElement.style.display = 'none';
 })
 
-// Control Video
-const videoEl = document.getElementById('video');
-const close = document.getElementById('close');
-close.addEventListener('click', function () {
-  close.style.display = 'none';
-  videoEl.style.display = 'none';
-})

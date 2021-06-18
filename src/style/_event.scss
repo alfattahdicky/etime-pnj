@@ -1,3 +1,11 @@
+.modal-register  {
+  z-index: 500;
+  background: #000;
+  width: 90%;
+  min-height: 80vh;
+}
+
+
 main {
   padding: 4rem 0 0;
   background: linear-gradient(
@@ -10,6 +18,7 @@ main {
   );
   color: $primary-color;
 
+  
   section {
     .container {
       margin: 5rem 0;
