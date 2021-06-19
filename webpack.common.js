@@ -8,7 +8,9 @@ module.exports = {
     index: "./src/index.js",
     home: "./src/script/home.js"
   },
-
+  output: {
+    path: path.resolve(__dirname, 'dist'),
+  },
   module: {
     rules: [
       {
@@ -17,7 +19,12 @@ module.exports = {
       },
       {
         test: /\.mp4$/,
-        loader: 'file-loader'
+        loader: {
+          loader: 'file-loader',
+          options: {
+            outputPath: 'video'
+          }
+        }
       },
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/i,

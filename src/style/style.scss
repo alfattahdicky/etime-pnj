@@ -285,8 +285,17 @@ nav {
     height: auto;
   }
   .sponsor {
-    img {
+    .very-small {
+      width: 75px;
+    }
+    .small {
       width: 150px;
+    }
+    .medium {
+      width: 170px;
+    }
+    .big {
+      width: 270px;
     }
   }
 }

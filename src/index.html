@@ -1,518 +1,487 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <meta name="description" content=" E-Time(Electro Activities Programme) merupakan
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="description" content=" E-Time(Electro Activities Programme) merupakan
     perlombaan tahunan berskala nasional di bidang teknik elektro
     dengan peserta yang berasal dari Universitas dan Politeknik
     se-Indonesia.">
-    <meta name="keywords" content="event, technology, robot, internet of things, teknologi, politeknik negeri jakarta, pnj, etime">
-    <meta property="og:title" content="Event">
-    <meta property="og:description" content="Electro Activities Programme merupakan perlombaan di bidang teknik elektro dalam skala nasional.">
-    <meta property="og:image" content="https://i.ibb.co/MGWg1QY/android-chrome-512x512.png">
-    <link rel="shortcut icon" href="./favicon/favicon.ico" type="image/x-icon" />
-    <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
-    <title>E-Time</title>
-  </head>
-  <body id="home">
-    <!-- Loading --> 
-      <div class="loading text-center " id="loading">
-        <div class="spinner-border" role="status">
-          <span class="visually-hidden ">Loading...</span>
+  <meta name="keywords"
+    content="event, technology, robot, internet of things, teknologi, politeknik negeri jakarta, pnj, etime">
+  <meta property="og:title" content="Event">
+  <meta property="og:description"
+    content="Electro Activities Programme merupakan perlombaan di bidang teknik elektro dalam skala nasional.">
+  <meta property="og:image" content="https://i.ibb.co/MGWg1QY/android-chrome-512x512.png">
+  <link rel="shortcut icon" href="./favicon/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+  <title>E-Time</title>
+</head>
+
+<body id="home">
+  <!-- Loading -->
+  <div class="loading text-center " id="loading">
+    <div class="spinner-border" role="status">
+      <span class="visually-hidden ">Loading...</span>
+    </div>
+  </div>
+  <!-- Finish Loading -->
+
+  <!-- Iklan -->
+  <div class="video-iklan position-fixed bottom-0 start-0">
+    <span id="close"><i class="bi bi-x-lg"></i></span>
+    <video width="320px" height="200px" controls="controls" autoplay="autoplay" muted id="video">
+      <source src="./assets/videos/indobot.mp4" type="video/mp4">
+    </video>
+  </div>
+  <!-- Finish Iklan -->
+
+  <!-- Navbar -->
+  <nav class="fixed-top navbar navbar-expand-md  py-2">
+    <div class="container">
+      <a class="navbar-brand d-flex align-center" href="#main">
+        <img src="./assets/logo/etime-logo-2021.png" alt="Logo E-Time" width="36px" height="36px"
+          class="d-inline-block align-text-top me-2" />
+        E-Time 2021
+      </a>
+      <button class="navbar-toggler" id="navbar-toggler" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarContent" aria-controls="navbarContent">
+        <span class="bi bi-list" id="toggle"></span>
+      </button>
+      <div class="collapse navbar-collapse d-lg-flex justify-content-end" id="navbarContent">
+        <ul class="navbar-nav text-center gap-4 py-3 py-md-0">
+          <li class="nav-item">
+            <a class="nav-link" href="#main">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link align-text-center" href="#" id="navbarDropdownMenuLink" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">Events
+              <span class="dropdown-toggle" id="iconDropdownToggle"></span></a>
+            <ul class="dropdown-menu text-center text-md-left" aria-labelledby="navbarDropdownMenuLink">
+              <li><a href="./iot.html" class="dropdown-item">Kompetisi IOT</a></li>
+              <li><a href="./rmi.html" class="dropdown-item">Kompetisi RMI</a></li>
+              <li><a href="./plc.html" class="dropdown-item">Kompetisi PLC</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- Finish Navbar -->
+
+  <!-- Hero -->
+  <section class="hero position-relative">
+    <img class="vh-100 w-100 img-fluid" src="./assets/background-bintang.png" alt="Background Bintang" />
+    <div
+      class="container content-hero position-absolute top-50 start-50 translate-middle text-center align-items-center">
+      <img src="./assets/logo/etime-logo-2021.png" alt="Logo E-Time" data-aos="fade-up" />
+      <h1 class="title-hero">E-Time 2021</h1>
+      <h4 class="caption-hero">Explore Technology to Make it Infinity</h4>
+    </div>
+  </section>
+  <!-- Finish Hero -->
+
+  <!-- Intro dan Events -->
+  <section class="etime-intro py-5 px-2" id="main">
+    <section class="intro py-5">
+      <div class="container">
+        <div class="row justify-content-around text-center text-md-start">
+          <div class="col-md-5 col-lg-3 pb-3 pb-lg-0" data-aos="zoom-out-down">
+            <img src="./assets/logo/etime-logo-2021.png" alt="Logo E-Time" />
+          </div>
+          <div class="col-md-5 pt-3 pt-lg-0 align-self-center" data-aos="zoom-out-up">
+            <h1>Apa itu E-Time?</h1>
+            <p>
+              E-Time <i>(Electro Activities Programme)</i> merupakan
+              perlombaan tahunan berskala nasional di bidang teknik elektro
+              dengan peserta yang berasal dari Universitas dan Politeknik
+              se-Indonesia. Dengan memiliki tujuan diantara :
+            <ul class="text-start">
+              <li>Mewadahi kreativitas mahasiswa dalam bidang teknologi yang inovatif</li>
+              <li>Memberikan apresiasi kepada mahasiswa terhadap hasil karyanya</li>
+              <li>Meningkatkan silahturahmi antar mahasiswa seluruh Indonesia</li>
+              <li>Meningkatkan jiwa kompetisi seluruh mahasiswa Indonesia</li>
+            </ul>
+            </p>
+          </div>
         </div>
       </div>
-    <!-- Finish Loading -->
+    </section>
+    <section class="events pt-5" id="events">
+      <div class="container overflow-hidden">
+        <h1 class="text-center">Events</h1>
+        <div class="row py-4 justify-content-around align-items-center text-center text-md-start">
+          <div class="col-md-5 col-lg-3 pb-4 pb-lg-0 " data-aos="flip-left">
+            <img src="./assets/logo/Logo IoT.png" alt="Logo IOT" />
+          </div>
+          <div class="col-md-5 pt-3 pt-lg-0" data-aos="flip-right">
+            <h1>Internet Of Things</h1>
+            <p>
+              <i>Internet of Things</i> merupakan sebuah konsep yang bertujuan untuk memperluas manfaat dari
+              konektivitas internet yang tersambung secara terus menerus. Karya yang dibuat merupakan integrasi antara
+              perangkat-keras (hardware) dan perangkat-lunak (software) dan dibantu dari sistem Internet of Things yang
+              dapat bekerja secara otomatis.
+            </p>
+            <a href="./iot.html" class="link">Selengkapnya</a>
+          </div>
+        </div>
+        <div class="row py-4 justify-content-around align-items-center text-center text-md-start">
+          <div class="col-md-5 col-lg-5 pb-4 pb-lg-0 order-1 order-md-2" data-aos="flip-up">
+            <img src="./assets/logo/Logo RMI.png" alt="Logo RMI" />
+          </div>
+          <div class="col-md-5 pt-3 pt-lg-0 order-2 order-md-1 " data-aos="flip-down">
+            <h1>Robot Mini Industrial</h1>
+            <p>
+              <i>Robot Mini Industri</i> (RMI) merupakan konsep robot otomatis yang dikontrol dengan menggunakan
+              mikrokontroller tertentu dan menggunakan suatu bahasa pemrograman yang bergerak mengikuti suatu garis
+              secara otomatis dengan melewati rintangan yang ditentukan atau lebih dikenal dengan istilah robot line
+              follower.
+            </p>
+            <a href="./rmi.html" class="link">Selengkapnya</a>
+          </div>
+        </div>
+        <div class="row py-4 justify-content-around align-items-center text-center text-md-start">
+          <div class="col-md-5 col-lg-3 pb-4 pb-lg-0" data-aos="zoom-in-right">
+            <img src="./assets/logo/Logo PLC.png" alt="Logo PLC" />
+          </div>
+          <div class="col-md-5 pt-3 pt-lg-0" data-aos="zoom-in-left">
+            <h1>Programmable Logic Controller</h1>
+            <p>
+              <i>Programmable Logic Controller</i> (PLC) merupakan salah satu perangkat keras yang keberadaannya
+              memiliki peranan kontrol dalam industri. Penggunaan PLC mampu menaikkan produktifitas, meningkatkan
+              efisiensi, mengurangi biaya produksi, menghasilkan kualitas produk yang konsisten, dan lain sebagainnya.
+              Pengoperasian produksi membutuhkan program yang ditulis dalam bentuk ladder logic.
+            </p>
+            <a href="./plc.html" class="link">Selengkapnya</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </section>
+  <!-- Finish Intro dan Events -->
 
-    <!-- Iklan -->
-    <div class="video-iklan position-fixed bottom-0 start-0">
-      <span id="close"><i class="bi bi-x-lg"></i></span>
-      <video width="320px" height="200px" controls="controls" autoplay="autoplay" muted id="video">
-        <source src="./assets/videos/indobot.mp4" type="video/mp4">
-      </video>	
-    </div>
-    <!-- Finish Iklan -->
+  <!-- Roadmap dan Sponsorship -->
+  <section class="etime-timeline py-5">
+    <section class="roadmap py-3" data-aos="zoom-in">
+      <div class="container mx-auto text-center">
+        <h1 class="mb-4">Roadmap</h1>
+        <img class="img-fluid" src="./assets/roadmap.png" alt="Roadmap E-Time" />
+      </div>
+    </section>
 
-    <!-- Navbar -->
-    <nav class="fixed-top navbar navbar-expand-md  py-2">
+    <!-- Timeline -->
+    <section class="timeline py-5">
       <div class="container">
-        <a class="navbar-brand d-flex align-center" href="#main">
-          <img
-            src="./assets/logo/etime-logo-2021.png"
-            alt="Logo E-Time"
-            width="36px"
-            height="36px"
-            class="d-inline-block align-text-top me-2"
-          />
-          E-Time 2021
-        </a>
-        <button
-          class="navbar-toggler"
-          id="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarContent"
-          aria-controls="navbarContent"
-        >
-          <span class="bi bi-list" id="toggle"></span>
-        </button>
-        <div
-          class="collapse navbar-collapse d-lg-flex justify-content-end"
-          id="navbarContent"
-        >
-          <ul class="navbar-nav text-center gap-4 py-3 py-md-0">
-            <li class="nav-item">
-              <a class="nav-link" href="#main">Home</a>
+        <h1 class="text-center pb-4">Timeline Acara E-Time</h1>
+        <div class="timeline">
+          <ul>
+            <li>
+              <div class="content">
+                <time>10 Mei 2021 - 27 Mei 2021</time> <br />
+                Pendaftaran Online dan Pengumpulan Proposal IoT
+              </div>
             </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link align-text-center"
-                href="#"
-                id="navbarDropdownMenuLink"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-                >Events
-                <span class="dropdown-toggle" id="iconDropdownToggle"></span
-              ></a>
-              <ul
-                class="dropdown-menu text-center text-md-left"
-                aria-labelledby="navbarDropdownMenuLink"
-              >
-                <li><a href="./iot.html" class="dropdown-item">Kompetisi IOT</a></li>
-                <li><a href="./rmi.html" class="dropdown-item">Kompetisi RMI</a></li>
-                <li><a href="./plc.html" class="dropdown-item">Kompetisi PLC</a></li>
-              </ul>
+            <li>
+              <div class="content">
+                <time>10 Mei - 18 Juni 2021</time> <br />
+                Pendaftaran Lomba PLC
+              </div>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#contact">Contact</a>
+            <li>
+              <div class="content">
+                <time>10 Mei - 20 Juni 2021</time> <br />
+                Pendaftaran Lomba RMI
+              </div>
+            </li>
+            <li>
+              <div class="content">
+                <time>3 Juli 2021</time> <br />
+                Technical Meeting
+              </div>
+            </li>
+            <li>
+              <div class="content">
+                <time>6 Juli 2021 - 9 Juli 2021</time> <br />
+                Opening, Perlombaan, dan Closing
+              </div>
             </li>
           </ul>
         </div>
       </div>
-    </nav>
-    <!-- Finish Navbar -->
+    </section>
 
-    <!-- Hero -->
-    <section class="hero position-relative">
-      <img
-        class="vh-100 w-100 img-fluid"
-        src="./assets/background-bintang.png"
-        alt="Background Bintang"
-      />
-      <div
-        class="container content-hero position-absolute top-50 start-50 translate-middle text-center align-items-center"
-      >
-        <img src="./assets/logo/etime-logo-2021.png" alt="Logo E-Time" data-aos="fade-up" />
-        <h1 class="title-hero">E-Time 2021</h1>
-        <h4 class="caption-hero">Explore Technology to Make it Infinity</h4>
+    <!-- Brand -->
+    <section class="brand py-5" data-aos="zoom-in-up">
+      <div class="container">
+        <div class="row justify-content-around align-items-start text-center">
+          <div class="col-lg-3">
+            <h1 class="pb-3">Organize By</h1>
+            <img src="./assets/logo/logopnj.png" alt="Logo PNJ">
+            <img src="./assets/logo/logohme.png" alt="Logo HME">
+          </div>
+          <div class="col-lg-3 col-md-6 py-5 py-lg-0">
+            <h1 class="pb-3">Media Partner</h1>
+            <div class="row">
+              <div class=" d-flex justify-content-center align-items-center">
+                <div class="p-2">
+                  <img src="./assets/brand/Media Partner/1.png" alt="Media Partner">
+                </div>
+                <div class="p-2">
+                  <img src="./assets/brand/Media Partner/2.png" alt="Media Partner">
+                </div>
+                <div class="p-2">
+                  <img src="./assets/brand/Media Partner/3.png" alt="Media Partner">
+                </div>
+                <div class="p-2">
+                  <img src="./assets/brand/Media Partner/4.png" alt="Media Partner">
+                </div>
+              </div>
+              <div class=" d-flex justify-content-center align-items-center">
+                <div class="p-2">
+                  <img src="./assets/brand/Media Partner/5.png" alt="Media Partner">
+                </div>
+                <div class="p-2">
+                  <img src="./assets/brand/Media Partner/6.png" alt="Media Partner">
+                </div>
+                <div class="p-2">
+                  <img src="./assets/brand/Media Partner/7.png" alt="Media Partner">
+                </div>
+                <div class="p-2">
+                  <img src="./assets/brand/Media Partner/8.png" alt="Media Partner">
+                </div>
+              </div>
+              <div class=" d-flex justify-content-center align-items-center">
+                <div class="p-2">
+                  <img src="./assets/brand/Media Partner/9.png" alt="Media Partner">
+                </div>
+                <div class="p-2">
+                  <img src="./assets/brand/Media Partner/10.png" alt="Media Partner">
+                </div>
+                <div class="p-2">
+                  <img src="./assets/brand/Media Partner/11.png" alt="Media Partner">
+                </div>
+                <div class="p-2">
+                  <img src="./assets/brand/Media Partner/12.png" alt="Media Partner">
+                </div>
+              </div>
+              <div class=" d-flex justify-content-center align-items-center">
+                <div class="p-2">
+                  <img src="./assets/brand/Media Partner/13.png" alt="Media Partner">
+                </div>
+                <div class="p-2">
+                  <img src="./assets/brand/Media Partner/14.png" alt="Media Partner">
+                </div>
+                <div class="p-2">
+                  <img src="./assets/brand/Media Partner/15.png" alt="Media Partner">
+                </div>
+                <div class="p-2">
+                  <img src="./assets/brand/Media Partner/16.png" alt="Media Partner">
+                </div>
+              </div>
+              <div class=" d-flex justify-content-center align-items-center">
+                <div class="p-2">
+                  <img src="./assets/brand/Media Partner/17.png" alt="Media Partner">
+                </div>
+                <div class="p-2">
+                  <img src="./assets/brand/Media Partner/18.png" alt="Media Partner">
+                </div>
+                <div class="p-2">
+                  <img src="./assets/brand/Media Partner/19.png" alt="Media Partner">
+                </div>
+                <div class="p-2">
+                  <img src="./assets/brand/Media Partner/20.png" alt="Media Partner">
+                </div>
+              </div>
+              <div class=" d-flex justify-content-center align-items-center">
+                <div class="p-2">
+                  <img src="./assets/brand/Media Partner/21.png" alt="Media Partner">
+                </div>
+                <div class="p-2">
+                  <img src="./assets/brand/Media Partner/22.png" alt="Media Partner">
+                </div>
+                <div class="p-2">
+                  <img src="./assets/brand/Media Partner/23.png" alt="Media Partner">
+                </div>
+                <div class="p-2">
+                  <img src="./assets/brand/Media Partner/24.png" alt="Media Partner">
+                </div>
+              </div>
+              <div class=" d-flex justify-content-center align-items-center">
+                <div class="p-2">
+                  <img src="./assets/brand/Media Partner/25.png" alt="Media Partner">
+                </div>
+                <div class="p-2">
+                  <img src="./assets/brand/Media Partner/26.png" alt="Media Partner">
+                </div>
+                <div class="p-2">
+                  <img src="./assets/brand/Media Partner/27.png" alt="Media Partner">
+                </div>
+                <div class="p-2">
+                  <img src="./assets/brand/Media Partner/28.png" alt="Media Partner">
+                </div>
+              </div>
+              <div class=" d-flex justify-content-center align-items-center">
+                <div class="p-2">
+                  <img src="./assets/brand/Media Partner/29.png" alt="Media Partner">
+                </div>
+                <div class="p-2">
+                  <img src="./assets/brand/Media Partner/30.png" alt="Media Partner">
+                </div>
+                <div class="p-2">
+                  <img src="./assets/brand/Media Partner/31.png" alt="Media Partner">
+                </div>
+                <div class="p-2">
+                  <img src="./assets/brand/Media Partner/32.png" alt="Media Partner">
+                </div>
+              </div>
+              <div class=" d-flex justify-content-center align-items-center">
+                <div class="p-2">
+                  <img src="./assets/brand/Media Partner/33.png" alt="Media Partner">
+                </div>
+                <div class="p-2">
+                  <img src="./assets/brand/Media Partner/34.png" alt="Media Partner">
+                </div>
+                <div class="p-2">
+                  <img src="./assets/brand/Media Partner/35.png" alt="Media Partner">
+                </div>
+                <div class="p-2">
+                  <img src="./assets/brand/Media Partner/36.png" alt="Media Partner">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 py-4 py-lg-0 ">
+            <h1 class="pb-3">Supported By</h1>
+            <div class="row">
+              <div class="col d-flex justify-content-center align-items-center">
+                <div class="p-2">
+                  <img src="./assets/brand/Supported/1.png" alt="Supported">
+                </div>
+                <div class="p-2">
+                  <img src="./assets/brand/Supported/2.png" alt="Supported">
+                </div>
+                <div class="p-2">
+                  <img src="./assets/brand/Supported/3.png" alt="Supported">
+                </div>
+                <div class="p-2">
+                  <img src="./assets/brand/Supported/4.png" alt="Supported">
+                </div>
+              </div>
+              <div class="col d-flex justify-content-center align-items-center">
+                <div class="p-2">
+                  <img src="./assets/brand/Supported/5.png" alt="Supported">
+                </div>
+                <div class="p-2">
+                  <img src="./assets/brand/Supported/6.png" alt="Supported">
+                </div>
+                <div class="p-2">
+                  <img src="./assets/brand/Supported/7.png" alt="Supported">
+                </div>
+                <div class="p-2">
+                  <img src="./assets/brand/Supported/8.png" alt="Supported">
+                </div>
+              </div>
+              <div class="col d-flex justify-content-center align-items-center">
+                <div class="p-2">
+                  <img src="./assets/brand/Supported/9.png" alt="Supported">
+                </div>
+                <div class="p-2">
+                  <img src="./assets/brand/Supported/10.png" alt="Supported">
+                </div>
+                <div class="p-2">
+                  <img src="./assets/brand/Supported/11.png" alt="Supported">
+                </div>
+                <div class="p-2">
+                  <img src="./assets/brand/Supported/12.png" alt="Supported">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="sponsor text-center py-4">
+          <h1 class="pb-3">Sponsored By</h1>
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 justify-content-center align-items-center">
+            <div class="p-3 p-md-2 col">
+              <img src="./assets/brand/Sponsor/1.png" alt="Sponsor" class="big">
+            </div>
+            <div class="p-3 p-md-2 col">
+              <img src="./assets/brand/Sponsor/2.png" alt="Sponsor" class="medium">
+            </div>
+            <div class="p-3 p-md-2 col">
+              <img src="./assets/brand/Sponsor/3.png" alt="Sponsor" class="big">
+            </div>
+            <div class="p-3 p-md-2 col">
+              <img src="./assets/brand/Sponsor/4.png" alt="Sponsor" class="small">
+            </div>
+            <div class="p-3 p-md-2 col">
+              <img src="./assets/brand/Sponsor/5.png" alt="Sponsor" class="small">
+            </div>
+            <div class="p-3 p-md-2 col">
+              <img src="./assets/brand/Sponsor/6.png" alt="Sponsor" class="very-small">
+            </div>
+            <div class="p-3 p-md-2 col">
+              <img src="./assets/brand/Sponsor/7.png" alt="Sponsor" class="very-small">
+            </div>
+          </div>
+        </div>
       </div>
     </section>
-    <!-- Finish Hero -->
+    <!-- Finish Brand -->
 
-    <!-- Intro dan Events -->
-    <section class="etime-intro py-5 px-2" id="main">
-      <section class="intro py-5">
-        <div class="container">
-          <div class="row justify-content-around text-center text-md-start">
-            <div class="col-md-5 col-lg-3 pb-3 pb-lg-0" data-aos="zoom-out-down">
-              <img src="./assets/logo/etime-logo-2021.png" alt="Logo E-Time" />
-            </div>
-            <div class="col-md-5 pt-3 pt-lg-0 align-self-center" data-aos="zoom-out-up">
-              <h1>Apa itu E-Time?</h1>
-              <p>
-                E-Time <i>(Electro Activities Programme)</i> merupakan
-                perlombaan tahunan berskala nasional di bidang teknik elektro
-                dengan peserta yang berasal dari Universitas dan Politeknik
-                se-Indonesia. Dengan memiliki tujuan diantara :
-                <ul class="text-start">
-                  <li>Mewadahi kreativitas mahasiswa dalam bidang teknologi yang inovatif</li>
-                  <li>Memberikan apresiasi kepada mahasiswa terhadap hasil karyanya</li>
-                  <li>Meningkatkan silahturahmi antar mahasiswa seluruh Indonesia</li>
-                  <li>Meningkatkan jiwa kompetisi seluruh mahasiswa Indonesia</li>
-                </ul>
-              </p>
-            </div>
+  </section>
+  <!-- Finish Roadmap, Timeline dan Brand-->
+
+  <!-- Footer -->
+  <section class="etime-footer" id="contact">
+    <section class="footer-info py-5 px-4 px-md-0">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-2 pb-3 pb-md-0">
+            <img src="./assets/logo/etime-logo-2021.png" alt="Logo E-Time" />
+          </div>
+          <div class="col-md-3 d-flex flex-column align-self-start">
+            <h3>Navigasi</h3>
+            <a href="#home">Home</a>
+            <a href="#events">Events</a>
+            <a href="#contact">Contact</a>
+          </div>
+          <div class="col-md-3 d-flex flex-column align-self-start py-4 py-md-0">
+            <h3>Events</h3>
+            <a href="./iot.html">Internet Of Things</a>
+            <a href="./rmi.html">Robot Mini Industri</a>
+            <a href="./plc.html">Programme Logic Controller</a>
+          </div>
+          <div class="contact col-md-3 d-flex flex-column">
+            <h3>Contact Information</h3>
+            <a href="">Salma Lifia(Humas) 0895616064928</a>
+            <a href="">Akita Hasna(Humas) 081319527411</a>
           </div>
         </div>
-      </section>
-      <section class="events pt-5" id="events">
-        <div class="container overflow-hidden">
-          <h1 class="text-center">Events</h1>
-          <div
-            class="row py-4 justify-content-around align-items-center text-center text-md-start" 
-          >
-            <div class="col-md-5 col-lg-3 pb-4 pb-lg-0 " data-aos="flip-left">
-              <img src="./assets/logo/Logo IoT.png" alt="Logo IOT" />
-            </div>
-            <div class="col-md-5 pt-3 pt-lg-0" data-aos="flip-right">
-              <h1>Internet Of Things</h1>
-              <p>
-                <i>Internet of Things</i>  merupakan sebuah konsep yang bertujuan untuk memperluas manfaat dari konektivitas internet yang tersambung secara terus menerus. Karya yang dibuat merupakan integrasi antara perangkat-keras (hardware) dan perangkat-lunak (software) dan dibantu dari sistem Internet of Things yang dapat bekerja secara otomatis.
-              </p>
-              <a href="./iot.html" class="link">Selengkapnya</a>
-            </div>
-          </div>
-          <div
-            class="row py-4 justify-content-around align-items-center text-center text-md-start"
-          >
-            <div class="col-md-5 col-lg-5 pb-4 pb-lg-0 order-1 order-md-2" data-aos="flip-up">
-              <img src="./assets/logo/Logo RMI.png" alt="Logo RMI" />
-            </div>
-            <div class="col-md-5 pt-3 pt-lg-0 order-2 order-md-1 " data-aos="flip-down">
-              <h1>Robot Mini Industrial</h1>
-              <p>
-                <i>Robot Mini Industri</i>  (RMI) merupakan  konsep robot otomatis yang dikontrol dengan menggunakan mikrokontroller tertentu dan menggunakan suatu bahasa pemrograman yang bergerak mengikuti suatu garis secara otomatis dengan melewati rintangan yang ditentukan atau lebih dikenal dengan istilah robot line follower.
-              </p>
-              <a href="./rmi.html" class="link">Selengkapnya</a>
-            </div>
-          </div>
-          <div
-            class="row py-4 justify-content-around align-items-center text-center text-md-start"
-          >
-            <div class="col-md-5 col-lg-3 pb-4 pb-lg-0" data-aos="zoom-in-right">
-              <img src="./assets/logo/Logo PLC.png" alt="Logo PLC" />
-            </div>
-            <div class="col-md-5 pt-3 pt-lg-0" data-aos="zoom-in-left">
-              <h1>Programmable Logic Controller</h1>
-              <p>
-                <i>Programmable Logic Controller</i> (PLC) merupakan salah satu perangkat keras yang keberadaannya memiliki peranan kontrol dalam industri. Penggunaan PLC mampu menaikkan produktifitas, meningkatkan efisiensi, mengurangi biaya produksi, menghasilkan kualitas produk yang konsisten, dan lain sebagainnya. Pengoperasian produksi membutuhkan program yang ditulis dalam bentuk ladder logic.
-              </p>
-              <a href="./plc.html" class="link">Selengkapnya</a>
-            </div>
-          </div>
-        </div>
-      </section>
+      </div>
     </section>
-    <!-- Finish Intro dan Events -->
+    <footer class="pt-3">
+      <div class="container">
+        <div class="row justify-content-around align-items-center text-center">
+          <div class="col-md-4 pb-3 pb-md-0">© Media Kreatif E-Time</div>
+          <div class="col-md-4 d-flex justify-content-center">
+            <p class="pe-2 gmail">electroactivitiesprogramme@gmail.com</p>
+            <a href="https://www.instagram.com/etime_pnj/" class="pe-2"><img src="./assets/icons/instagram.svg"
+                alt="Instagram" /></a>
+            <a href="https://twitter.com/ETIME_PNJ" class="pe-2"><img src="./assets/icons/twitter.svg"
+                alt="Twitter" /></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </section>
+  <!-- Finish Footer -->
+</body>
 
-    <!-- Roadmap dan Sponsorship -->
-    <section class="etime-timeline py-5">
-      <section class="roadmap py-3" data-aos="zoom-in">
-        <div class="container mx-auto text-center">
-          <h1 class="mb-4">Roadmap</h1>
-          <img
-            class="img-fluid"
-            src="./assets/roadmap.png"
-            alt="Roadmap E-Time"
-          />
-        </div>
-      </section>
-
-      <!-- Timeline -->
-      <section class="timeline py-5">
-        <div class="container">
-          <h1 class="text-center pb-4">Timeline Acara E-Time</h1>
-          <div class="timeline">
-            <ul>
-              <li>
-                <div class="content">
-                  <time>10 Mei 2021 - 27 Mei 2021</time> <br />
-                  Pendaftaran Online dan Pengumpulan Proposal IoT
-                </div>
-              </li>
-              <li>
-                <div class="content">
-                  <time>10 Mei - 18 Juni 2021</time> <br />
-                  Pendaftaran Lomba PLC
-                </div>
-              </li>
-              <li>
-                <div class="content">
-                  <time>10 Mei - 20 Juni 2021</time> <br />
-                  Pendaftaran Lomba RMI 
-                </div>
-              </li>
-              <li>
-                <div class="content">
-                  <time>3 Juli 2021</time> <br />
-                  Technical Meeting
-                </div>
-              </li>
-              <li>
-                <div class="content">
-                  <time>6 Juli 2021 - 9 Juli 2021</time> <br />
-                  Opening, Perlombaan, dan Closing
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <!-- Brand -->
-      <section class="brand py-5" data-aos="zoom-in-up">
-        <div class="container">
-          <div class="row justify-content-around align-items-start text-center">
-            <div class="col-lg-3">
-              <h1 class="pb-3">Organize By</h1>
-              <img src="./assets/logo/logopnj.png" alt="Logo PNJ">
-              <img src="./assets/logo/logohme.png" alt="Logo HME">
-            </div>
-            <div class="col-lg-3 col-md-6 py-5 py-lg-0">
-              <h1 class="pb-3">Media Partner</h1>
-              <div class="row">
-                <div class=" d-flex justify-content-center align-items-center">
-                  <div class="p-2">
-                    <img src="./assets/brand/Media Partner/1.png" alt="Media Partner">
-                  </div>
-                  <div class="p-2">
-                    <img src="./assets/brand/Media Partner/2.png" alt="Media Partner">
-                  </div>
-                  <div class="p-2">
-                    <img src="./assets/brand/Media Partner/3.png" alt="Media Partner">
-                  </div>
-                  <div class="p-2">
-                    <img src="./assets/brand/Media Partner/4.png" alt="Media Partner">
-                  </div>
-                </div>
-                <div class=" d-flex justify-content-center align-items-center">
-                  <div class="p-2">
-                    <img src="./assets/brand/Media Partner/5.png" alt="Media Partner">
-                  </div>
-                  <div class="p-2">
-                    <img src="./assets/brand/Media Partner/6.png" alt="Media Partner">
-                  </div>
-                  <div class="p-2">
-                    <img src="./assets/brand/Media Partner/7.png" alt="Media Partner">
-                  </div>
-                  <div class="p-2">
-                    <img src="./assets/brand/Media Partner/8.png" alt="Media Partner">
-                  </div>
-                </div>
-                <div class=" d-flex justify-content-center align-items-center">
-                  <div class="p-2">
-                    <img src="./assets/brand/Media Partner/9.png" alt="Media Partner">
-                  </div>
-                  <div class="p-2">
-                    <img src="./assets/brand/Media Partner/10.png" alt="Media Partner">
-                  </div>
-                  <div class="p-2">
-                    <img src="./assets/brand/Media Partner/11.png" alt="Media Partner">
-                  </div>
-                  <div class="p-2">
-                    <img src="./assets/brand/Media Partner/12.png" alt="Media Partner">
-                  </div>
-                </div>
-                <div class=" d-flex justify-content-center align-items-center">
-                  <div class="p-2">
-                    <img src="./assets/brand/Media Partner/13.png" alt="Media Partner">
-                  </div>
-                  <div class="p-2">
-                    <img src="./assets/brand/Media Partner/14.png" alt="Media Partner">
-                  </div>
-                  <div class="p-2">
-                    <img src="./assets/brand/Media Partner/15.png" alt="Media Partner">
-                  </div>
-                  <div class="p-2">
-                    <img src="./assets/brand/Media Partner/16.png" alt="Media Partner">
-                  </div>
-                </div>
-                <div class=" d-flex justify-content-center align-items-center">
-                  <div class="p-2">
-                    <img src="./assets/brand/Media Partner/17.png" alt="Media Partner">
-                  </div>
-                  <div class="p-2">
-                    <img src="./assets/brand/Media Partner/18.png" alt="Media Partner">
-                  </div>
-                  <div class="p-2">
-                    <img src="./assets/brand/Media Partner/19.png" alt="Media Partner">
-                  </div>
-                  <div class="p-2">
-                    <img src="./assets/brand/Media Partner/20.png" alt="Media Partner">
-                  </div>
-                </div>
-                <div class=" d-flex justify-content-center align-items-center">
-                  <div class="p-2">
-                    <img src="./assets/brand/Media Partner/21.png" alt="Media Partner">
-                  </div>
-                  <div class="p-2">
-                    <img src="./assets/brand/Media Partner/22.png" alt="Media Partner">
-                  </div>
-                  <div class="p-2">
-                    <img src="./assets/brand/Media Partner/23.png" alt="Media Partner">
-                  </div>
-                  <div class="p-2">
-                    <img src="./assets/brand/Media Partner/24.png" alt="Media Partner">
-                  </div>
-                </div>
-                <div class=" d-flex justify-content-center align-items-center">
-                  <div class="p-2">
-                    <img src="./assets/brand/Media Partner/25.png" alt="Media Partner">
-                  </div>
-                  <div class="p-2">
-                    <img src="./assets/brand/Media Partner/26.png" alt="Media Partner">
-                  </div>
-                  <div class="p-2">
-                    <img src="./assets/brand/Media Partner/27.png" alt="Media Partner">
-                  </div>
-                  <div class="p-2">
-                    <img src="./assets/brand/Media Partner/28.png" alt="Media Partner">
-                  </div>
-                </div>
-                <div class=" d-flex justify-content-center align-items-center">
-                  <div class="p-2">
-                    <img src="./assets/brand/Media Partner/29.png" alt="Media Partner">
-                  </div>
-                  <div class="p-2">
-                    <img src="./assets/brand/Media Partner/30.png" alt="Media Partner">
-                  </div>
-                  <div class="p-2">
-                    <img src="./assets/brand/Media Partner/31.png" alt="Media Partner">
-                  </div>
-                  <div class="p-2">
-                    <img src="./assets/brand/Media Partner/32.png" alt="Media Partner">
-                  </div>
-                </div>
-                <div class=" d-flex justify-content-center align-items-center">
-                  <div class="p-2">
-                    <img src="./assets/brand/Media Partner/33.png" alt="Media Partner">
-                  </div>
-                  <div class="p-2">
-                    <img src="./assets/brand/Media Partner/34.png" alt="Media Partner">
-                  </div>
-                  <div class="p-2">
-                    <img src="./assets/brand/Media Partner/35.png" alt="Media Partner">
-                  </div>
-                  <div class="p-2">
-                    <img src="./assets/brand/Media Partner/36.png" alt="Media Partner">
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-6 py-4 py-lg-0 ">
-              <h1 class="pb-3">Supported By</h1>
-              <div class="row">
-                <div class="col d-flex justify-content-center align-items-center">
-                  <div class="p-2">
-                    <img src="./assets/brand/Supported/1.png" alt="Supported">
-                  </div>
-                  <div class="p-2">
-                    <img src="./assets/brand/Supported/2.png" alt="Supported">
-                  </div>
-                  <div class="p-2">
-                    <img src="./assets/brand/Supported/3.png" alt="Supported">
-                  </div>
-                  <div class="p-2">
-                    <img src="./assets/brand/Supported/4.png" alt="Supported">
-                  </div>
-                </div>
-                <div class="col d-flex justify-content-center align-items-center">
-                  <div class="p-2">
-                    <img src="./assets/brand/Supported/5.png" alt="Supported">
-                  </div>
-                  <div class="p-2">
-                    <img src="./assets/brand/Supported/6.png" alt="Supported">
-                  </div>
-                  <div class="p-2">
-                    <img src="./assets/brand/Supported/7.png" alt="Supported">
-                  </div>
-                  <div class="p-2">
-                    <img src="./assets/brand/Supported/8.png" alt="Supported">
-                  </div>
-                </div>
-                <div class="col d-flex justify-content-center align-items-center">
-                  <div class="p-2">
-                    <img src="./assets/brand/Supported/9.png" alt="Supported">
-                  </div>
-                  <div class="p-2">
-                    <img src="./assets/brand/Supported/10.png" alt="Supported">
-                  </div>
-                  <div class="p-2">
-                    <img src="./assets/brand/Supported/11.png" alt="Supported">
-                  </div>
-                  <div class="p-2">
-                    <img src="./assets/brand/Supported/12.png" alt="Supported">
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="sponsor text-center py-4">
-              <h1 class="pb-3">Sponsored By</h1>
-              <div class="row row-cols-1 row-cols-sm-3 row-cols-lg-3 justify-content-center align-items-center">
-                <div class="p-3 p-md-2 col">
-                  <img src="./assets/brand/Sponsor/1.png" alt="Sponsor">
-                </div>
-                <div class="p-3 p-md-2 col">
-                  <img src="./assets/brand/Sponsor/2.png" alt="Sponsor">
-                </div>
-                <div class="p-3 p-md-2 col">
-                  <img src="./assets/brand/Sponsor/3.png" alt="Sponsor">
-                </div>
-                <div class="p-3 p-md-2 col">
-                  <img src="./assets/brand/Sponsor/4.png" alt="Sponsor">
-                </div>
-                <div class="p-3 p-md-2 col">
-                  <img src="./assets/brand/Sponsor/5.png" alt="Sponsor">
-                </div>
-                <div class="p-3 p-md-2 col">
-                  <img src="./assets/brand/Sponsor/6.png" alt="Sponsor">
-                </div>
-                <div class="p-3 p-md-2 col">
-                  <img src="./assets/brand/Sponsor/7.png" alt="Sponsor">
-                </div>
-              </div>
-          </div>
-        </div>
-      </section>
-      <!-- Finish Brand -->
-      
-    </section>
-    <!-- Finish Roadmap, Timeline dan Brand-->
-
-    <!-- Footer -->
-    <section class="etime-footer" id="contact">
-      <section class="footer-info py-5 px-4 px-md-0">
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-md-2 pb-3 pb-md-0">
-              <img src="./assets/logo/etime-logo-2021.png" alt="Logo E-Time" />
-            </div>
-            <div class="col-md-3 d-flex flex-column align-self-start">
-              <h3>Navigasi</h3>
-              <a href="#home">Home</a>
-              <a href="#events">Events</a>
-              <a href="#contact">Contact</a>
-            </div>
-            <div
-              class="col-md-3 d-flex flex-column align-self-start py-4 py-md-0"
-            >
-              <h3>Events</h3>
-              <a href="./iot.html">Internet Of Things</a>
-              <a href="./rmi.html">Robot Mini Industri</a>
-              <a href="./plc.html">Programme Logic Controller</a>
-            </div>
-            <div class="contact col-md-3 d-flex flex-column">
-              <h3>Contact Information</h3>
-              <a href="">Salma Lifia(Humas) 0895616064928</a>
-              <a href="">Akita Hasna(Humas) 081319527411</a>
-            </div>
-          </div>
-        </div>
-      </section>
-      <footer class="pt-3">
-        <div class="container">
-          <div
-            class="row justify-content-around align-items-center text-center"
-          >
-            <div class="col-md-4 pb-3 pb-md-0">© Media Kreatif E-Time</div>
-            <div class="col-md-4 d-flex justify-content-center">
-              <p class="pe-2 gmail">electroactivitiesprogramme@gmail.com</p>
-              <a href="https://www.instagram.com/etime_pnj/" class="pe-2"
-                ><img src="./assets/icons/instagram.svg" alt="Instagram"
-              /></a>
-              <a href="https://twitter.com/ETIME_PNJ" class="pe-2"
-                ><img src="./assets/icons/twitter.svg" alt="Twitter"
-              /></a>
-            </div>
-          </div>
-        </div>
-      </footer>
-    </section>
-    <!-- Finish Footer -->
-  </body>
 </html>
