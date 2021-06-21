@@ -8,6 +8,9 @@ Aos.init({
 
 // Navbar
 const toggle = document.getElementById("toggle");
+const loadingElement = document.getElementById('loading');
+const image = document.getElementsByTagName("img");
+const items = document.querySelectorAll(".timeline li");
 
 toggle.addEventListener("click", function () {
   if (toggle.className === "bi bi-list") {
@@ -29,7 +32,7 @@ function isElementInViewport(el) {
   );
 }
 
-const items = document.querySelectorAll(".timeline li");
+
 function callbackFun() {
   for (let i = 0; i < items.length; i++) {
     if (isElementInViewport(items[i])) {
@@ -38,23 +41,16 @@ function callbackFun() {
   }
 }
 
-window.addEventListener("load", callbackFun);
-window.addEventListener("scroll", callbackFun);
-
-
 // Loading lazy
-const image = document.getElementsByTagName("img");
-
 for (let i = 0; i < image.length; i++) {
   image[i].setAttribute("loading", "lazy");
 }
 
 
 // loading content
-
-const loadingElement = document.getElementById('loading');
-
 window.addEventListener('load', function () {
   loadingElement.style.display = 'none';
+  callbackFun();
 })
+window.addEventListener("scroll", callbackFun);
 

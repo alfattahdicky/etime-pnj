@@ -28,6 +28,10 @@ body {
   }
 }
 
+iframe {
+  max-width: 100%;
+}
+
 h1 {
   @include rfs(2.3rem, font-size);
 }
