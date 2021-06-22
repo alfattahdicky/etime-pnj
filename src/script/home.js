@@ -8,16 +8,19 @@ function closeIklan() {
   videoEl.style.display = 'none';
 }
 
+const stopBrandDicoding = () => {
+  brandDicoding.className = 'd-none';
+  brandDicoding.firstElementChild.src = "";
+}
+
 close.addEventListener('click', closeIklan);
 
 const dateEnd = () => {
   return new Date().getDate() === 25;
 }
 
-setTimeout(() => {
-  brandDicoding.className = 'd-none';
-}, 32000)
+setTimeout(stopBrandDicoding, 32000)
 
 if (dateEnd()) {
-  brandDicoding.className = 'd-none';
+  stopBrandDicoding();
 }
