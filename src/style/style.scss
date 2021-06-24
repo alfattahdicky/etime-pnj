@@ -355,11 +355,17 @@ nav {
   }
 }
 
+
+
 // Video Iklan
 .video-iklan {
-	max-width: 100%;
-  height: auto;
+  @include responsive-video();
   z-index: 10;
+  overflow: hidden;
+  #video-omron {
+    @include responsive-video();
+    max-width: 100%;
+  }
   i {
     position: absolute;
     top: 9px;

@@ -1,26 +1,19 @@
 // Control Video
 const videoEl = document.getElementById('video');
 const close = document.getElementById('close');
-const brandDicoding = document.getElementById('brand-dicoding');
+const brandOmron = document.getElementById('video-omron');
 
 function closeIklan() {
   close.style.display = 'none';
   videoEl.style.display = 'none';
 }
 
-const stopBrandDicoding = () => {
-  brandDicoding.className = 'd-none';
-  brandDicoding.firstElementChild.src = "";
+const stopBrand = () => {
+  brandOmron.classList.add('d-none');
+  brandOmron.currentSrc = '';
 }
+const dateEnd = () => new Date().getDate() === 2;
 
+setTimeout(() => stopBrand(), 48000)
+if (dateEnd()) stopBrand();
 close.addEventListener('click', closeIklan);
-
-const dateEnd = () => {
-  return new Date().getDate() === 25;
-}
-
-setTimeout(stopBrandDicoding, 32000)
-
-if (dateEnd()) {
-  stopBrandDicoding();
-}

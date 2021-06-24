@@ -35,3 +35,8 @@ $button-color: #104891;
   min-height: 44px;
   line-height: 44px;
 }
+
+@mixin responsive-video {
+  max-width: 100%;
+  height: auto;
+}

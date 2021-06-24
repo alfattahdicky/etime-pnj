@@ -32,10 +32,10 @@
   </div>
   <!-- Finish Loading -->
 
-  <!-- Iklan -->
+  <!-- Iklan Indobot -->
   <div class="video-iklan position-fixed bottom-0 start-0">
     <span id="close"><i class="bi bi-x-lg"></i></span>
-    <video width="320px" height="200px" controls="controls" autoplay="autoplay" muted id="video">
+    <video width="320px" height="200px" autoplay="autoplay" muted id="video" preload="metadata">
       <source src="./assets/videos/indobot.mp4" type="video/mp4">
     </video>
   </div>
@@ -115,6 +115,15 @@
         </div>
       </div>
     </section>
+
+    <!-- Iklan Omron -->
+    <div class="video-iklan d-flex justify-content-center align-items-center">
+      <video width="420px" height="300px" autoplay="autoplay" muted id="video-omron" disablePictureInPicture>
+        <source src="./assets/videos/omron.mp4" type="video/mp4">
+      </video>
+    </div>
+    <!-- Finish -->
+
     <section class="events pt-5" id="events">
       <div class="container overflow-hidden">
         <h1 class="text-center">Events</h1>
@@ -176,13 +185,6 @@
         <img class="img-fluid" src="./assets/roadmap.png" alt="Roadmap E-Time" />
       </div>
     </section>
-
-    <div id="brand-dicoding" class="brand-dicoding d-flex justify-content-center align-items-center my-5">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/KOsxMThsbEE?autoplay=1&enablejsapi=1"
-        title="YouTube video player" frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen></iframe>
-    </div>
 
     <!-- Timeline -->
     <section class="timeline py-5">
