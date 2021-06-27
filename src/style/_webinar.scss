@@ -1,0 +1,126 @@
+h1 {
+  @include rfs(2.4rem, font-size)
+}
+
+.wrap-webinar {
+  background: linear-gradient(180deg, #000000 -6.06%, #23477D 36.56%, rgba(0, 71, 122, 0.92) 58.36%, #173C59 84.04%, #050506 97.23%);
+
+  // Hero
+  .hero-inner-webinar {
+    margin: 0;
+    .hero_title {
+      z-index: 2;
+      color: $primary-color;
+      .hero_date {
+        font-size: 1.2rem;
+      }
+      .hero_title-tagline {
+        font-weight: 600;
+        @include rfs(2.8rem, font-size);
+      }
+      .hero_btn {
+        margin: 2rem 0 0 0;
+        .hero_btn_link {
+          background-color: $timeline-content-color;
+          color: $primary-color;
+          padding: 1rem 1.5rem;
+          min-width: 44px;
+          min-height: 44px;
+        }
+      }
+    }
+    .hero_image{
+      z-index: 0;
+      img {
+        width: 100%;
+        max-width: 500px;
+        height: auto;
+      }
+    }
+  }
+  // Main
+  .webinar-main {
+    background: transparent;
+    .information {
+      img {
+        width: 100px;
+        height: auto;
+        margin-bottom: 10px;
+      }
+      h4{
+        text-align: center;
+        @include rfs(1.3rem, font-size);
+      }
+    }
+    .people {
+      max-width: 1000px;
+      margin: 0 auto;
+      img {
+        width: 150px;
+        height: auto;
+        margin-bottom: 8px;
+      }
+      .speaker {
+        margin: 0 auto;
+      }
+    }
+    .benefit {
+      @extend .information;
+    }
+    .contact-lomba {
+      h3 {
+        @include rfs(1.7rem, font-size);
+      }
+      .contact-img {
+        width: 230px;
+        height: auto;
+      }
+      a {
+        background: transparent;
+        padding: 16px 28px 8px;
+        text-decoration: none;
+        color: $primary-color;
+        border: 2px solid #25d366;
+        border-radius: 5px;
+        transition: background-color 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+        &:hover {
+          background-color: #25d366;
+        }
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up(lg) { 
+  .wrap-webinar {
+    .hero-inner-webinar {
+      .hero_title {
+        .hero_title-tagline {
+          @include rfs(3.8rem,font-size)
+        }
+      }
+      .hero_image{
+        img {
+          width: 100%;
+          max-width: 700px;
+          height: auto;
+        }
+      }
+    }
+    .webinar-main {
+      .information {
+        img {
+          width: 150px;
+          margin-bottom: 1rem;
+        }
+      }
+
+      .benefit {
+        img {
+          width: 180px;
+        }
+      }
+    }
+  }
+
+}
