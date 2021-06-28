@@ -112,6 +112,7 @@ nav {
 
 .etime-intro {
   color: $primary-color;
+  position: relative;
   background: linear-gradient(
     180deg,
     #060607 4.17%,
@@ -128,6 +129,7 @@ nav {
   }
   // events
   .events {
+    z-index: 1;
     img {
       $size: 350px;
       width: $size;
@@ -149,6 +151,31 @@ nav {
         transform: scale(0.95);
       }
     }
+  }
+  .container-maskot {
+    position: absolute;
+    top: 40%;
+    right: 0;
+    transform: translateY(0);
+    animation: maskot 4s cubic-bezier(0.645, 0.045, 0.355, 1) infinite;
+  }
+}
+
+@keyframes maskot {
+  0% {
+    transform: translateY(8%);
+  }
+  25% {
+    transform: translateY(10%);
+  }
+  50% {
+    transform: translateY(15%);
+  }
+  75% {
+    transform: translateY(10%);
+  }
+  100%{
+    transform: translateY(8%);
   }
 }
 
