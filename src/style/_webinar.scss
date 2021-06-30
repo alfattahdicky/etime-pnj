@@ -2,12 +2,15 @@ h1 {
   @include rfs(2.4rem, font-size)
 }
 
-.wrap-webinar {
-  background: linear-gradient(180deg, #000000 -6.06%, #23477D 36.56%, rgba(0, 71, 122, 0.92) 58.36%, #173C59 84.04%, #050506 97.23%);
-
+.wrap-webinar { 
+  background: linear-gradient(180.51deg, #010101 22.32%, rgba(0, 71, 122, 0.98) 56.44%, #050506 122.28%);
   // Hero
   .hero-inner-webinar {
     margin: 0;
+    img{
+      object-position: center;
+      object-fit: cover;
+    }
     .hero_title {
       z-index: 2;
       color: $primary-color;
@@ -21,20 +24,21 @@ h1 {
       .hero_btn {
         margin: 2rem 0 0 0;
         .hero_btn_link {
-          background-color: $timeline-content-color;
+          background-color: #0d50a8;
           color: $primary-color;
-          padding: 1rem 1.5rem;
+          padding: 1.2rem 2.2rem;
           min-width: 44px;
           min-height: 44px;
+          @include rfs(1.3rem, font-size)
         }
       }
-    }
-    .hero_image{
-      z-index: 0;
-      img {
-        width: 100%;
-        max-width: 500px;
-        height: auto;
+      .hero_image{
+        z-index: 0;
+        img {
+          width: 100%;
+          max-width: 500px;
+          height: auto;
+        }
       }
     }
   }

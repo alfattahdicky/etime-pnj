@@ -66,6 +66,23 @@ main {
         }
       }
     }
+
+    &.notice {
+      h2 {
+        @include rfs(2rem, font-size);
+      }
+      .notice-image {
+        img {
+          width: 100%;
+          max-width: 500px;
+          margin: 0 auto;
+          display: block;
+          height: auto;
+          padding: 1rem 0;
+        }
+      }
+    }
+
     &.price-lomba {
       h1 {
         @include rfs(1.7rem, font-size);
