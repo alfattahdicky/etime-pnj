@@ -36,6 +36,7 @@ iframe {
 
 h1 {
   @include rfs(2.3rem, font-size);
+  text-shadow: 5px 5px #2978b5;
 }
 
 p {
@@ -130,7 +131,6 @@ nav {
   }
   // events
   .events {
-    z-index: 1;
     img {
       $size: 350px;
       width: $size;

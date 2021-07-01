@@ -39,9 +39,12 @@ module.exports = merge(common, {
     }),
   ],
   optimization: {
+    minimize: true,
     minimizer: [
       new TerserPlugin(),
-      new CSSMinimizerPlugin(),
+      new CSSMinimizerPlugin({
+        parallel: true,
+      }),
       new HtmlWebpackPlugin({
         template: "./src/index.html",
         minify: {
