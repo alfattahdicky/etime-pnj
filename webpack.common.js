@@ -6,7 +6,6 @@ const CopyWebpackPlugin = require("copy-webpack-plugin");
 module.exports = {
   entry: {
     index: "./src/index.js",
-    home: "./src/script/home.js"
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -58,7 +57,7 @@ module.exports = {
       filename: "index.html",
       inject: true,
       template: "./src/index.html",
-      chunks: ["index", "home"],
+      chunks: ["index"],
     }),
     new HtmlWebpackPlugin({
       filename: "iot.html",
