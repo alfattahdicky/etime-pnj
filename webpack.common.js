@@ -74,6 +74,11 @@ module.exports = {
       template: "./src/page/plc.html",
       chunks: ["index"],
     }),
+    new HtmlWebpackPlugin({
+      filename: "exhibition.html",
+      template: "./src/page/exhibition.html",
+      chunks: ["index"],
+    }),
     new MiniCssExtractPlugin({
       filename: "main.css",
     }),

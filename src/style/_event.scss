@@ -35,6 +35,21 @@ main {
         @include rfs(1rem, padding-bottom);
       }
     }
+
+    &.winners {
+      .template {
+        background: linear-gradient(180deg, rgba(17, 155, 255, 0.23) 13.39%, rgba(71, 129, 242, 0.2001) 51.26%, rgba(31, 66, 134, 0.23) 93.26%);
+        box-shadow: 14px 13px 12px rgba(42, 110, 159, 0.7);
+        border-radius: 30px;
+        max-width: 400px;
+        height: 300px;
+        padding: 1.4rem 1rem;
+        img {
+          max-width: 200px;
+        }
+      }
+    }
+
     &.lomba {
       .card {
         background-color: #142238;

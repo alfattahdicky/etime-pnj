@@ -1,0 +1,179 @@
+
+.hero-exhibition {
+  padding-top: 4rem;
+  img{
+    object-position: center;
+    object-fit: cover;
+  }
+  .hero-exhibition_title {
+    padding: 0 2rem;
+    color: $primary-color;
+    .hero-exhibition_label {
+      max-width: 500px;
+      font-size: 2.6rem;
+      font-weight: 700;
+    }
+    .hero-exhibition_description {
+      line-height: 1.7;
+    }
+    a {
+      border: none;
+      outline: none;
+      text-decoration: none;
+      display: inline-block;
+      background-color: $timeline-content-color;
+      color: $primary-color;
+      min-width: 44px;
+      min-height: 44px;
+      font-size: 1.2rem;
+      padding: 0.7rem 1.2rem;
+      border-radius: 5px;
+      letter-spacing: 1px;
+      margin-top: 10px;
+      transition: border-radius .3s ease;
+      &:hover {
+        border-radius: 0;
+      }
+    }
+  }
+}
+
+.exhibition-main {
+  background: linear-gradient(187.28deg, #010101 14.31%, rgba(0, 71, 122, 0.98) 48.49%, rgba(0, 0, 0, 0.91) 107.33%);
+  .banner-title {
+    background-color: $timeline-content-color;
+    max-width: 800px;
+    padding: 1rem 0 1rem 5px ;
+    text-shadow: 8px 10px 1px #000;
+    h2 {
+      font-weight: 400;
+      font-size: 1.4rem;
+    }
+  }
+
+  .view-start {
+    .icons-play {
+      z-index: 2;
+      i {
+        font-size: 7rem;
+        color: $primary-color;
+      }
+    }
+  }
+  .download-artstep {
+    padding: 0 2rem;
+    img{
+      max-width: 120px;
+    }
+    a {
+      text-decoration: none;
+      border: 3px solid #000;
+      border-radius: 5px;
+      padding: 10px 0;
+      width: 250px;
+      transition: border .3s ease;
+      img{
+        max-width: 40px;
+      }
+      p{
+        margin: 0;
+        color: $primary-color;
+      }
+      &:hover {
+        border-color: #fff;
+      }
+    }
+  } 
+
+  .seeyou {
+    background: linear-gradient(98.85deg, #061021 25.32%, rgba(103, 144, 222, 0.24) 104.21%);
+    h2 {
+      font-weight: 900;
+    }
+    img{
+      max-width: 200px;
+    }
+  }
+}
+
+@include media-breakpoint-up(sm) {
+  .exhibition-main {
+    .download-artstep {
+      img {
+        max-width: 150px;
+      }
+    }
+  }
+}
+
+
+@include media-breakpoint-up(md) {
+  .exhibition-main {
+    .banner-title {
+      padding-left: 1.5rem;
+      h2 {
+        @include rfs(2.5rem, font-size);
+      }
+    }
+    .view-start {
+      img{
+        max-width: 500px;
+      }
+    }
+    .download-artstep {
+      h2 {
+        @include rfs(2.4rem, font-size);
+      }
+    }
+    .seeyou {
+      h2 {
+        font-size: 3rem;
+      }
+      img{
+        max-width: 300px;
+      }
+    }
+    
+  }
+}
+
+
+@include media-breakpoint-up(lg) { 
+    .hero-exhibition {
+      .hero-exhibition_title {
+        margin-top: 5rem;
+        .hero-exhibition_description {
+          max-width: 500px;
+        }
+      }
+    }
+    .exhibition-main {
+      .banner-title {
+        h2 {
+          @include rfs(3.3rem, font-size);
+        }
+      }
+      .view-start {
+        img{
+          max-width: 650px;
+        }
+      }
+      .download-artstep {
+        img {
+          max-width: 280px;
+        }
+        a{
+          width: 400px;
+          padding: 12px 0;
+        }
+      }
+      .seeyou {
+        h2 {
+          font-size: 4.5rem;
+        }
+        img{
+          max-width: 400px;
+        }
+      }
+    }
+}

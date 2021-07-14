@@ -1,5 +1,6 @@
 @import "config";
 @import "event";
+@import "exhibition";
 
 * {
   margin: 0;
@@ -39,7 +40,6 @@ h1 {
 }
 
 p {
-  text-align: justify;
   @include rfs(1rem, font-size);
 }
 
